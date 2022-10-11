@@ -1,0 +1,37 @@
+.card {
+        background-color: #FFF;
+        margin: 0rem 1rem 2rem 1rem;
+        width: auto;
+        height: 200px;
+        border-radius: 15px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 5px 5px map-get($grey, shadow);
+        &__img {
+            border-radius: 15px 15px 0 0;
+            height: 70%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &__new {
+            position:absolute;
+            z-index: 2;
+            top: 15px;
+            right: 15px;
+            background-color: $colorTertiary;
+            color: darken($colorTertiary, 45);
+            font-weight: bold;
+            padding: 0 10px
+        }
+        &__bottom {
+            @include flexbox($spacing:space-between);
+            padding: .7rem 1rem;
+        }
+        &__heart {
+            &--full {
+                display: none;
+            }
+        }
+    }
+        
+        

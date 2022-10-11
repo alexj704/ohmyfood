@@ -1,0 +1,121 @@
+.location {
+    background: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
+    box-shadow: inset 0 10px 5px -8px #c5c4c4;
+
+    & i {
+        padding-left: 20px;
+    }
+
+    & input {
+        background-color: lighten($colorGrey, 15);
+        border: none;
+        font-size: 1rem;
+        text-align: center;
+
+    }
+}
+
+.explore {
+    @include flexbox ($direction:column, $align:center);
+    padding: 20px;
+    text-align: center;
+    background-color: lighten($colorGrey, 18);
+
+    & h2 {
+        padding: 0 15px;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    & p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    &__btn {
+        border-radius: 24px;
+        background: radial-gradient(at 20% top, $colorSecondary, $colorPrimary);
+        border: none;
+        padding: 1rem;
+        color: #FFF;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 5px 5px $colorGrey;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            background: radial-gradient(at 20% top, lighten($colorSecondary, 0), lighten($colorPrimary, 5));
+            box-shadow: 0 8px 8px map-get($map: $grey, $key: shadow);
+            transform: scale(1.1);
+        }
+    }
+}
+
+.fonctionnement {
+    margin: 2.5rem 1rem;
+    @include flexbox($direction:column, $align:center);
+
+    h2 {
+        padding: 1rem 0;
+        align-self: flex-start;
+    }
+
+    .selection__btn {
+
+        max-width: 320px;
+        width: 100%;
+        min-height: 71px;
+        padding: 1rem;
+        border-radius: 17px;
+        background-color: lighten($color: $colorGrey, $amount: 20);
+        border: none;
+        box-shadow: 0 5px 5px map-get($map: $grey, $key: medium);
+        font-size: 1rem;
+        margin: 0.8rem 0.5rem;
+        position: relative;
+        transition: 1s;
+        @include flexbox($spacing:center);
+
+        &:hover {
+            background-color: lighten($color: $colorPrimary, $amount: 32);
+
+            &>.selection__icon {
+                color: $colorPrimary
+            }
+        }
+
+        span {
+            border: 1px solid $colorPrimary;
+            background-color: $colorPrimary;
+            color: #FFF;
+            padding: 0.2rem 0.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            position: absolute;
+            left: -15px
+        }
+    }
+
+    .selection__icon {
+        color: darken($colorGrey, 25);
+        font-size: 1.2rem;
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        margin-right: 2rem;
+
+    }
+}
+
+.restaurants {
+    background-color: lighten($colorGrey, 18);
+    padding-bottom: 2rem;
+    h2 {
+        padding: 2rem 0 1rem 1rem;
+    }
+}
