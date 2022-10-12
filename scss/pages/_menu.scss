@@ -1,0 +1,43 @@
+header {
+    position: relative;
+
+    .back {
+        position: absolute;
+        top: 1.8rem;
+        left: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    height: auto;
+    width: 100%;
+    transform: translateY(-40px);
+    border-radius: 35px 35px 0 0;
+    background-color: lighten($colorGrey, 18);
+    padding: 1rem 1.5rem;
+    margin-bottom: -40px;
+    &__header {
+        @include flexbox($spacing: space-between);
+    }
+
+    &__subtitle {
+        margin: 1rem 0;
+        position: relative;
+        &::after {
+            content: "";
+            width:40px;
+            border-bottom: solid 2px $colorTertiary;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+        }        
+    }
+}
