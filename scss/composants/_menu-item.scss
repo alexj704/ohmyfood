@@ -34,7 +34,7 @@
         box-shadow: 0 5px 5px map-get($grey, medium);
         @include flexbox($spacing: space-between);
         animation: charging-menu .8s ease-in-out;
-        @for $i from 1 through 15 {
+        @for $i from 1 through 10 {
                         &--#{$i} {
                             animation-delay: 100ms * $i;
                         }

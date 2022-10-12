@@ -40,4 +40,8 @@ img {
             bottom: -2px;
         }        
     }
+    &__btn {
+                @include flexbox($spacing: center);
+                padding: 1.5rem 0;
+    }
 }
