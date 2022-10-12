@@ -187,11 +187,13 @@ header h1 {
 }
 .card__heart--empty {
   position: absolute;
+  font-size: 1.5rem;
   top: -10px;
   right: 0;
 }
 .card__heart--full {
   position: absolute;
+  font-size: 1.5rem;
   top: -10px;
   right: 0;
   opacity: 0;
