@@ -18,6 +18,49 @@ ul {
   margin: 0;
 }
 
+.loader {
+  background-color: #FFF;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  animation: loader 1s 3s forwards;
+}
+.loader__div {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loader__circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transform: rotate(0);
+  background-image: linear-gradient(0deg, #FF79DA, #9356DC);
+  margin: 0 2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(3000px);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .btn {
   border-radius: 24px;
   background: radial-gradient(at 20% top, #FF79DA, #9356DC);
@@ -190,6 +233,8 @@ header h1 {
   font-size: 1.5rem;
   top: -10px;
   right: 0;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
 }
 .card__heart--full {
   position: absolute;
@@ -197,15 +242,16 @@ header h1 {
   top: -10px;
   right: 0;
   opacity: 0;
-  transform: scale(1);
-  transition: all 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
   color: transparent;
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-image: linear-gradient(0deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
 }
+.card__heart:hover .card__heart--empty {
+  opacity: 0;
+}
 .card__heart:hover .card__heart--full {
-  transform: scale(1.2);
   opacity: 1;
 }
 
