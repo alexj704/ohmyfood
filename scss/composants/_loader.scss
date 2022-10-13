@@ -16,12 +16,12 @@
         
     }
     &__circle {
-        height: 100px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
         border-radius: 50%;
         transform: rotate(0);
         background-image: linear-gradient(0deg, $colorSecondary, $colorPrimary);
-        margin: 0 2rem;
+        margin: 0 1.5rem;
         animation: spin 1s linear infinite;
 
     }
