@@ -20,20 +20,22 @@
         width: 50px;
         border-radius: 50%;
         transform: rotate(0);
-        background-image: linear-gradient(0deg, $colorSecondary, $colorPrimary);
+        border-left: solid 10px $colorPrimary;
+        border-top: solid 10px $colorSecondary;
+        border-right: solid 10px $colorTertiary;
         margin: 0 1.5rem;
-        animation: spin 1s linear infinite;
+        animation: spin 1.5s linear infinite;
 
     }
 }
 
 @keyframes loader {
     0% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     100% {
-        transform: translateX(3000px);
+        transform: translateY(3000px);
     }
 }
     
