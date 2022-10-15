@@ -38,7 +38,7 @@
     opacity: 0;
   }
   100% {
-    transform: scaleX(70px);
+    transform: scaleX(1);
     opacity: 1;
   }
 }
