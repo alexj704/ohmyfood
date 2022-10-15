@@ -7,6 +7,7 @@
     padding: 0 16px;
     box-shadow: inset 0 10px 5px -8px #c5c4c4;
 
+
     & i {
         padding-left: 20px;
     }
@@ -16,7 +17,24 @@
         border: none;
         font-size: 1rem;
         text-align: center;
+    }
 
+    @media screen and (min-width:$tablet) {
+        height: 60px;
+        font-size: 1.5rem;
+
+        & input {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (min-width:$desktop) {
+        height: 80px;
+        font-size: 2rem;
+
+        & input {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -38,7 +56,7 @@
     }
 }
 
-.fonctionnement {
+.selection {
     margin: 2.5rem 1rem;
     @include flexbox($direction:column, $align:center);
 
@@ -47,7 +65,7 @@
         align-self: flex-start;
     }
 
-    .selection__btn {
+    &__btn {
 
         max-width: 320px;
         width: 100%;
@@ -83,7 +101,7 @@
         }
     }
 
-    .selection__icon {
+    &__icon {
         color: darken($colorGrey, 25);
         font-size: 1.2rem;
         display: inline-block;
@@ -92,12 +110,37 @@
         margin-right: 2rem;
 
     }
+
 }
 
 .restaurants {
     background-color: lighten($colorGrey, 18);
     padding-bottom: 2rem;
+
     h2 {
         padding: 2rem 0 1rem 1rem;
+    }
+}
+
+@media screen and (min-width:$tablet)
+{
+    .restaurants__flex {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:$desktop) {
+    .selection {
+        flex-direction: row;
+        h2 {
+            align-self: center;
+        }
+    }
+
+    .restaurants__flex {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
     }
 }

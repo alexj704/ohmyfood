@@ -38,33 +38,3 @@
             }
         }
 }
-
-
-
-@keyframes loader {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(3000px);
-    }
-}
-    
-@keyframes spin {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes circletranslate {
-    from {
-        transform:translateY(-55vh);
-    }
-    to {
-        transform: translateY(0);
-    }
-}

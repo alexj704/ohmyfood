@@ -1,0 +1,54 @@
+@keyframes loader {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(3000px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes circletranslate {
+    from {
+        transform: translateY(-55vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+        @keyframes charging-menu {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+    
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes selection {
+            0% {
+                transform: scaleX(0);
+                opacity: 0;
+            }
+    
+            100% {
+                transform: scaleX(70px);
+                opacity: 1;
+            }
+    
+        }

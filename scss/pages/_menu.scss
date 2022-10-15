@@ -24,6 +24,7 @@ img {
     background-color: lighten($colorGrey, 18);
     padding: 1rem 1.5rem;
     margin-bottom: -40px;
+
     &__header {
         @include flexbox($spacing: space-between);
     }
@@ -31,17 +32,28 @@ img {
     &__subtitle {
         margin: 1rem 0;
         position: relative;
+
         &::after {
             content: "";
-            width:40px;
+            width: 40px;
             border-bottom: solid 2px $colorTertiary;
             position: absolute;
             left: 0;
             bottom: -2px;
-        }        
+        }
     }
+
     &__btn {
-                @include flexbox($spacing: center);
-                padding: 1.5rem 0;
+        @include flexbox($spacing: center);
+        padding: 1.5rem 0;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .menu__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 2rem;
     }
 }

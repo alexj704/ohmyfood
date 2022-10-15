@@ -16,3 +16,29 @@ footer {
     padding-right: 7px;
 }
 }
+
+@media screen and (min-width:$tablet) {
+    footer {
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    ul {
+    @include flexbox;
+    }
+    li {
+        font-size: 1.1rem;
+    }
+}
+}
+
+@media screen and (min-width:$desktop) {
+    footer {
+        h2 {
+            font-size: 2rem;
+        }
+        li {
+            font-size: 1.5rem;
+        }
+    }
+}
