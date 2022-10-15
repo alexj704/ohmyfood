@@ -19,7 +19,7 @@ ul {
 }
 
 .loader {
-  background-color: #FFF;
+  background-color: #000;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -28,7 +28,7 @@ ul {
   opacity: 0.9;
   display: flex;
   align-items: center;
-  animation: loader 1s 3s forwards;
+  animation: loader 1s 4s forwards;
 }
 .loader__div {
   display: flex;
@@ -40,11 +40,22 @@ ul {
   width: 50px;
   border-radius: 50%;
   transform: rotate(0);
+  transform: translateY(-55vh);
   border-left: solid 10px #9356DC;
   border-top: solid 10px #FF79DA;
   border-right: solid 10px #99E2D0;
   margin: 0 1.5rem;
-  animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite, circletranslate 1.5s;
+}
+
+.circle--1 {
+  animation-delay: -100ms;
+}
+.circle--2 {
+  animation-delay: -200ms;
+}
+.circle--3 {
+  animation-delay: -300ms;
 }
 
 @keyframes loader {
@@ -60,7 +71,15 @@ ul {
     transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
+  }
+}
+@keyframes circletranslate {
+  from {
+    transform: translateY(-55vh);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 .btn {
@@ -91,7 +110,7 @@ header {
 header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  font-size: clamp(2em, 4vw, 3.5em);
+  font-size: 2rem;
 }
 
 .location {

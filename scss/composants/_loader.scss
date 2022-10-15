@@ -1,5 +1,5 @@
 .loader {
-    background-color: #FFF;
+    background-color: #000;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -8,7 +8,7 @@
     opacity: 0.9;
     display: flex;
     align-items: center;
-    animation: loader 1s  3s forwards;
+    animation: loader 1s  4s forwards;
     &__div {
         display: flex;
         margin-left: auto;
@@ -20,14 +20,26 @@
         width: 50px;
         border-radius: 50%;
         transform: rotate(0);
+        transform: translateY(-55vh);
         border-left: solid 10px $colorPrimary;
         border-top: solid 10px $colorSecondary;
         border-right: solid 10px $colorTertiary;
         margin: 0 1.5rem;
-        animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite, circletranslate 1.5s;
+        
 
     }
 }
+
+.circle{
+    @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: -100ms * $i;
+            }
+        }
+}
+
+
 
 @keyframes loader {
     0% {
@@ -44,6 +56,15 @@
         transform: rotate(0);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes circletranslate {
+    from {
+        transform:translateY(-55vh);
+    }
+    to {
+        transform: translateY(0);
     }
 }
