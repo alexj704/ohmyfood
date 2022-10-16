@@ -5,9 +5,10 @@
         border-radius: 15px;
         padding-left: 1rem;
         margin-bottom: 0.8rem;
+        opacity: 0;
         box-shadow: 0 5px 5px map-get($grey, medium);
         @include flexbox($spacing: space-between);
-        animation: charging-menu .8s ease-in-out;
+        animation: charging-menu .8s ease-in-out forwards;
         @for $i from 1 through 10 {
                         &--#{$i} {
                             animation-delay: 100ms * $i;

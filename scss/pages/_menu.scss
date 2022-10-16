@@ -26,7 +26,14 @@ img {
     margin-bottom: -40px;
 
     &__header {
-        @include flexbox($spacing: space-between);
+        h2 {
+            text-align: left;
+        }
+        i {
+            position: absolute;
+            top: -25px;
+        }
+
     }
 
     &__subtitle {
@@ -36,10 +43,11 @@ img {
         &::after {
             content: "";
             width: 40px;
-            border-bottom: solid 2px $colorTertiary;
+            padding-bottom: 50px;
+            border-bottom: solid 4px $colorTertiary;
             position: absolute;
             left: 0;
-            bottom: -2px;
+            bottom: -4px;
         }
     }
 
@@ -50,6 +58,12 @@ img {
 }
 
 @media screen and (min-width: $desktop) {
+    .menu__header {
+        margin-bottom: 20px;
+        h2 {
+            text-align: center;
+        }
+    }
     .menu__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
