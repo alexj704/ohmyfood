@@ -57,6 +57,14 @@ img {
     }
 }
 
+@media screen and (min-width:$tablet) {
+    .menu__subtitle {
+        font-size: 25px;
+    }
+}
+
+
+
 @media screen and (min-width: $desktop) {
     .menu__header {
         margin-bottom: 20px;
