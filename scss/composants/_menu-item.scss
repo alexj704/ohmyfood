@@ -91,20 +91,38 @@
 @media screen and (min-width:$tablet) and (max-width:$desktop) {
     .item {
         height: 90px;
-    }
-
-    .item__price {
-        font-size: 1.5rem;
-    }
-
-    .item__name {
-        h4 {
-            padding: 1rem 0 .5rem 0;
-            font-size: 1.5rem;
+        &__name {
+            h4 {
+                padding: 1rem 0 .5rem 0;
+                font-size: 1.3rem;
+            }
+                
+            p {
+            font-size: 1.1rem;
+            }
         }
+        &__price {
+            font-size: 1.3rem;
+            margin-right: 1rem;
+            padding-bottom: 1rem;
+        }
+        &__chosen {
+            font-size: 1.5rem;
+            width: 100px;
+        }
+      &:hover {
+          .item {
+              &__name {
+                  width: calc(100% - 140px);
+             }
+             &__price {
+                    transform: translateX(-80px);
+             }
+                &__chosen {
+                    width: 80px;
+                }
+            }
 
-        p {
-            font-size: 1.2rem;
         }
     }
 }

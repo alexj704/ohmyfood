@@ -74,7 +74,7 @@ ul {
   opacity: 1;
   display: flex;
   align-items: center;
-  animation: loader 1s 4s forwards;
+  animation: loader 1s 2s forwards;
 }
 .loader__div {
   display: flex;
@@ -91,7 +91,7 @@ ul {
   border-top: solid 10px #FF79DA;
   border-right: solid 10px #99E2D0;
   margin: 0 1.5rem;
-  animation: spin 1.5s linear infinite, circletranslate 1.5s;
+  animation: spin 1.5s linear infinite, circletranslate 0.5s;
 }
 
 .circle--1 {
@@ -132,16 +132,18 @@ header {
 header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 @media screen and (min-width: 768px) {
   header h1 {
     font-size: 3rem;
+    margin: 1rem 0;
   }
 }
 @media screen and (min-width: 992px) {
   header h1 {
     font-size: 4rem;
+    margin: 0.8rem 0;
   }
 }
 
@@ -203,14 +205,16 @@ header h1 {
 
 .selection {
   margin: 2.5rem 1rem;
+}
+.selection h2 {
+  padding: 1rem 0.5rem;
+  align-self: flex-start;
+}
+.selection__flex {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.selection h2 {
-  padding: 1rem 0;
-  align-self: flex-start;
 }
 .selection__btn {
   max-width: 320px;
@@ -271,11 +275,11 @@ header h1 {
   }
 }
 @media screen and (min-width: 992px) {
-  .selection {
-    flex-direction: row;
+  .selection__btn {
+    max-width: 280px;
   }
-  .selection h2 {
-    align-self: center;
+  .selection__flex {
+    flex-direction: row;
   }
   .restaurants__flex {
     grid-template-columns: repeat(4, 1fr);
@@ -442,17 +446,17 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .menu__subtitle {
-    font-size: 25px;
-  }
-}
-@media screen and (min-width: 992px) {
   .menu__header {
     margin-bottom: 20px;
   }
   .menu__header h2 {
     text-align: center;
   }
+  .menu__subtitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
   .menu__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -574,15 +578,30 @@ img {
   .item {
     height: 90px;
   }
-  .item__price {
-    font-size: 1.5rem;
-  }
   .item__name h4 {
     padding: 1rem 0 0.5rem 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .item__name p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .item__price {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+  }
+  .item__chosen {
+    font-size: 1.5rem;
+    width: 100px;
+  }
+  .item:hover .item__name {
+    width: calc(100% - 140px);
+  }
+  .item:hover .item__price {
+    transform: translateX(-80px);
+  }
+  .item:hover .item__chosen {
+    width: 80px;
   }
 }
 

@@ -58,11 +58,15 @@
 
 .selection {
     margin: 2.5rem 1rem;
-    @include flexbox($direction:column, $align:center);
+    
 
     h2 {
-        padding: 1rem 0;
+        padding: 1rem 0.5rem;
         align-self: flex-start;
+    }
+
+    &__flex {
+        @include flexbox($direction: column, $align: center);
     }
 
     &__btn {
@@ -80,6 +84,7 @@
         position: relative;
         transition: 1s;
         @include flexbox($spacing:center);
+        
 
         &:hover {
             background-color: lighten($color: $colorPrimary, $amount: 32);
@@ -133,9 +138,11 @@
 
 @media screen and (min-width:$desktop) {
     .selection {
+        &__btn {
+            max-width: 280px;
+        }
+        &__flex {
         flex-direction: row;
-        h2 {
-            align-self: center;
         }
     }
 

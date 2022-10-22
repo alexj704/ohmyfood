@@ -58,20 +58,21 @@ img {
 }
 
 @media screen and (min-width:$tablet) {
+    .menu__header {
+        margin-bottom: 20px;
+        h2 {
+            text-align: center;
+
+        }
+    }
     .menu__subtitle {
-        font-size: 25px;
+        font-size: 1.5rem;
     }
 }
 
 
 
 @media screen and (min-width: $desktop) {
-    .menu__header {
-        margin-bottom: 20px;
-        h2 {
-            text-align: center;
-        }
-    }
     .menu__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
