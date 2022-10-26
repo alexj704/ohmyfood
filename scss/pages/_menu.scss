@@ -74,6 +74,9 @@ img {
 
 
 @media screen and (min-width: $desktop) {
+    img {
+        height: 400px;
+    }
     .menu__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

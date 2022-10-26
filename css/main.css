@@ -50,8 +50,6 @@
 
 body {
   font-family: Roboto, sans-serif;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 a {
@@ -455,6 +453,9 @@ img {
   }
 }
 @media screen and (min-width: 992px) {
+  img {
+    height: 400px;
+  }
   .menu__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
