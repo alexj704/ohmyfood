@@ -5,6 +5,7 @@
     align-items: $align;
     flex-wrap: $wrap;
 }
+
 @mixin shadow {
     box-shadow: 0 5px 5px $colorGrey;
 }

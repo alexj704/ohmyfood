@@ -9,11 +9,13 @@
         box-shadow: 0 5px 5px map-get($grey, medium);
         @include flexbox($spacing: space-between);
         animation: charging-menu .8s ease-in-out forwards;
+
         @for $i from 1 through 10 {
-                        &--#{$i} {
-                            animation-delay: 100ms * $i;
-                        }
-                    }
+            &--#{$i} {
+                animation-delay: 100ms * $i;
+            }
+        }
+
         position: relative;
 
         &__name {
@@ -88,41 +90,47 @@
 
     }
 
-@media screen and (min-width:$tablet) and (max-width:$desktop) {
-    .item {
-        height: 90px;
-        &__name {
-            h4 {
-                padding: 1rem 0 .5rem 0;
-                font-size: 1.3rem;
-            }
-                
-            p {
-            font-size: 1.1rem;
-            }
-        }
-        &__price {
-            font-size: 1.3rem;
-            margin-right: 1rem;
-            padding-bottom: 1rem;
-        }
-        &__chosen {
-            font-size: 1.5rem;
-            width: 100px;
-        }
-      &:hover {
-          .item {
-              &__name {
-                  width: calc(100% - 140px);
-             }
-             &__price {
-                    transform: translateX(-80px);
-             }
-                &__chosen {
-                    width: 80px;
+    @media screen and (min-width:$tablet) and (max-width:$desktop) {
+        .item {
+            height: 90px;
+
+            &__name {
+                h4 {
+                    padding: 1rem 0 .5rem 0;
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
                 }
             }
 
+            &__price {
+                font-size: 1.3rem;
+                margin-right: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            &__chosen {
+                font-size: 1.5rem;
+                width: 100px;
+            }
+
+            &:hover {
+                .item {
+                    &__name {
+                        width: calc(100% - 140px);
+                    }
+
+                    &__price {
+                        transform: translateX(-80px);
+                    }
+
+                    &__chosen {
+                        width: 80px;
+                    }
+                }
+
+            }
         }
     }
-}

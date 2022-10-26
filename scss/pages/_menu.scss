@@ -29,6 +29,7 @@ img {
         h2 {
             text-align: left;
         }
+
         i {
             position: absolute;
             top: -25px;
@@ -60,11 +61,13 @@ img {
 @media screen and (min-width:$tablet) {
     .menu__header {
         margin-bottom: 20px;
+
         h2 {
             text-align: center;
 
         }
     }
+
     .menu__subtitle {
         font-size: 1.5rem;
     }
