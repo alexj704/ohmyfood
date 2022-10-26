@@ -418,6 +418,7 @@ img {
   margin-bottom: -40px;
 }
 .menu__header h2 {
+  font-family: "Shrikhand", cursive;
   text-align: left;
 }
 .menu__header i {
@@ -448,9 +449,6 @@ img {
 @media screen and (min-width: 768px) {
   .menu__header {
     margin-bottom: 20px;
-  }
-  .menu__header h2 {
-    text-align: center;
   }
   .menu__subtitle {
     font-size: 1.5rem;

@@ -27,6 +27,7 @@ img {
 
     &__header {
         h2 {
+            font-family: $font-header;
             text-align: left;
         }
 
@@ -62,10 +63,7 @@ img {
     .menu__header {
         margin-bottom: 20px;
 
-        h2 {
-            text-align: center;
-
-        }
+        
     }
 
     .menu__subtitle {
