@@ -28,27 +28,27 @@
     }
 }
 
-        @keyframes charging-menu {
-            0% {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-    
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    
-        @keyframes selection {
-            0% {
-                transform: scaleX(0);
-                opacity: 0;
-            }
-    
-            100% {
-                transform: scaleX(1);
-                opacity: 1;
-            }
-    
-        }
+@keyframes charging-menu {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes selection {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+}
